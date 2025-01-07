@@ -1,0 +1,157 @@
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #1d1f33; /* Ciemniejszy odcień granatowego */
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff; /* Biały dla kontrastu */
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+.card {
+  background-color: #2d3142; /* Ciemniejszy odcień szaro-niebieskiego */
+  border-radius: 10px; /* Zaokrąglone rogi dla lepszego wyglądu */
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Drobniejsze cienie dla elegancji */
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mocniejsze cienie na hover */
+}
+
+.cardImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid #13a27d; /* Zielona linia pod obrazkiem */
+}
+
+.cardContent {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f0f0f0; /* Jasny kolor tekstu */
+  text-align: center;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #b0b0b0; /* Jaśniejszy szary dla opisu */
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cardButton {
+  display: inline-block;
+  text-align: center;
+  background-color: #13a27d; /* Ciemny zielony */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cardButton:hover {
+  background-color: #084837; /* Ciemniejszy odcień zielonego */
+  transform: translateY(-2px);
+}
+
+.cardButton:active {
+  transform: translateY(1px); /* Efekt nacisku */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .cardsContainer {
+    padding: 20px 10px;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .cardContent {
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .cardButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsContainer {
+    padding: 60px 40px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    max-width: 350px;
+  }
+
+  .cardContent {
+    padding: 25px;
+  }
+
+  .cardTitle {
+    font-size: 1.75rem;
+  }
+
+  .cardDescription {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .cardButton {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+}

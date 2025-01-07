@@ -1,0 +1,99 @@
+.contactSection {
+  padding: 2rem;
+  background: linear-gradient(to bottom, #16c79a, #161632);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #66ccff;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #222244;
+  padding: 2rem 4rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #b3c1d1;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #161632;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #666;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #66ccff;
+  box-shadow: 0 0 8px rgba(102, 204, 255, 0.5);
+}
+
+.textarea {
+  resize: none;
+}
+
+.submitButton {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #16c79a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #13a27d;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(22, 199, 155, 0.684),
+    /* Neonowy zielony */ rgba(22, 22, 50, 0.95) /* Głębia ciemnego granatu */
+  );
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.image {
+  border-radius: 10px;
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtelny cień */
+}
+
+.content {
+  max-width: 800px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.aboutMeText {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #b3c1d1; /* Pastelowy szary-niebieski */
+  line-height: 1.6;
+}
+
+.resumeButton {
+  padding: 12px 30px;
+  background-color: #16c79a; /* Neonowy zielony */
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.resumeButton:hover {
+  background-color: #13a27d; /* Ciemniejszy zielony */
+  transform: translateY(-5px) scale(1.05); /* Animacja na hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Dodanie cienia */
+}
+
+.resumeButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animacja wjeżdżającego tekstu */
+.textAnimation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

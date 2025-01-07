@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #161632, #222244);
+  color: #f9f9f9;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  font-size: 2rem;
+  color: #66ccff;
+  margin-bottom: 1.5rem;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contactLink {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #16c79a;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #16c79a;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+  background-color: #16c79a;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .contactLink {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
