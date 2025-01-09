@@ -1,7 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
 
 .navbar {
-  background-color: rgba(26, 25, 25, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
@@ -12,16 +21,24 @@
   align-items: center;
   font-family: "Inter", sans-serif;
   color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeInNavbar 1s ease-out;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
+  color: #00c7a0; /* Cyjanowy kolor dla logo */
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Powiększenie logo na hover */
 }
 
 .logoText {
-  color: #16c79a; /* Neonowy zielony */
   text-decoration: none;
+  color: inherit;
 }
 
 .hamburger {
@@ -31,64 +48,92 @@
   width: 30px;
   height: 25px;
   cursor: pointer;
-  z-index: 1100;
   background: none;
   border: none;
+  z-index: 1100;
+  transition: all 0.3s ease;
 }
 
 .bar {
   width: 30px;
   height: 4px;
-  background-color: white;
-  transition: transform 0.3s ease;
+  background-color: #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger:hover .bar {
+  background-color: #00c7a0; /* Cyjanowy kolor dla hamburgera */
 }
 
 .navList {
   display: none;
   list-style: none;
-  padding: 0;
   margin: 0;
   flex-direction: column;
-  width: 100%;
-  text-align: center;
   position: absolute;
-  top: 60px; /* Odstęp od navbaru */
-  right: 50px;
-  background-color: rgba(26, 25, 25, 0.9); /* Tło dla menu */
+  top: 65px;
+  right: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.5s ease-out;
 }
 
 .navList li {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  text-align: center;
   cursor: pointer;
-  width: 100%;
+  animation: fadeInUp 0.3s ease-out;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navList a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .navList li:hover {
-  background-color: #16c79a; /* Neonowy zielony */
-  transform: translateY(5px); /* Animacja efektu hover */
+  transform: translateX(10px); /* Przesunięcie w prawo przy hover */
+  background-color: #00c7a0; /* Cyjanowy kolor tła */
 }
 
 .navList a:hover {
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .show {
   display: flex !important;
-  animation: slideIn 0.3s ease-in-out;
 }
 
-@keyframes slideIn {
+@keyframes fadeInNavbar {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
   to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -96,11 +141,13 @@
 @media (min-width: 768px) {
   .navList {
     display: flex;
-    position: initial;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background: transparent; /* Brak tła na większych ekranach */
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    animation: none; /* Brak animacji na większych ekranach */
   }
 
   .hamburger {
@@ -109,15 +156,11 @@
 
   .navList li {
     padding: 1rem 2rem;
-    cursor: pointer;
-  }
-
-  .navList a {
-    font-size: 1.1rem;
+    animation: none; /* Brak animacji na większych ekranach */
   }
 
   .navList li:hover {
-    background-color: transparent;
     transform: none;
+    background-color: transparent;
   }
 }

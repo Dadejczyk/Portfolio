@@ -24,7 +24,7 @@ function Projects() {
               <h3 className={styles.cardTitle}>{card.title}</h3>
               <p className={styles.cardDescription}>{card.description}</p>
               <a
-                href={card.link}
+                href={`/projects/${card.id}`} // Dynamiczne linkowanie do szczegółów projektu
                 className={styles.cardButton}
                 aria-label={`Learn more about ${card.title}`}
               >

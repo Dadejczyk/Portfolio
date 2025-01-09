@@ -8,18 +8,24 @@
   background: linear-gradient(
     to top,
     rgba(22, 199, 155, 0.684),
-    /* Neonowy zielony */ rgba(22, 22, 50, 0.95) /* Głębia ciemnego granatu */
+    rgba(22, 22, 50, 0.95)
   );
   color: #ffffff;
   font-family: "Inter", sans-serif;
   text-align: center;
+  animation: fadeInContainer 1s ease-out;
 }
 
 .image {
   border-radius: 10px;
   max-width: 250px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtelny cień */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
 }
 
 .content {
@@ -31,19 +37,22 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
+  animation: fadeInText 1.5s ease-out;
 }
 
 .aboutMeText {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 2rem;
-  color: #b3c1d1; /* Pastelowy szary-niebieski */
+  color: #b3c1d1;
   line-height: 1.6;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 0.5s forwards;
 }
 
 .resumeButton {
   padding: 12px 30px;
-  background-color: #16c79a; /* Neonowy zielony */
+  background-color: #16c79a;
   border: none;
   border-radius: 25px;
   color: #ffffff;
@@ -52,12 +61,13 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  animation: bounceIn 0.6s ease-out;
 }
 
 .resumeButton:hover {
-  background-color: #13a27d; /* Ciemniejszy zielony */
-  transform: translateY(-5px) scale(1.05); /* Animacja na hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Dodanie cienia */
+  background-color: #13a27d;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .resumeButton:active {
@@ -65,12 +75,45 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Animacja wjeżdżającego tekstu */
 .textAnimation {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   animation: slideIn 1.5s ease-out;
+}
+
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {

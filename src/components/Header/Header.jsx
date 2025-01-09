@@ -3,11 +3,7 @@ import styles from "./header.module.css";
 function Header() {
   return (
     <header id="home" className={styles.hero}>
-      <img
-        src="./images/kid-8788962_640.jpg"
-        alt=""
-        className={styles.overlay}
-      />
+      <img src="./images/kid.jpg" alt="" className={styles.overlay} />
       <div className={styles.content}>
         <h1 className={styles.title}>
           Hi, I'm <span className={styles.name}>Bartłomiej Dadej</span>

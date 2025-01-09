@@ -10,8 +10,8 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo} onClick={toggleMenu}>
-        <a className={styles.logoText}>MySite</a>
+      <div className={styles.logo}>
+        <a className={styles.logoText}>BDesigns</a>
       </div>
 
       <button

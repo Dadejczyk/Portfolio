@@ -1,0 +1,121 @@
+.footer {
+  background-color: #1d1f33; /* Ciemne tło */
+  color: #ffffff; /* Jasny tekst */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoSection {
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #13a27d; /* Zielony akcent */
+  transition: color 0.3s ease; /* Płynna zmiana koloru */
+}
+
+.logo:hover {
+  color: #66ccff; /* Zmiana koloru logo na niebieski na hover */
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #b0b0b0; /* Subtelny tekst */
+  margin-top: 0.5rem;
+  transition: color 0.3s ease; /* Płynna zmiana koloru */
+}
+
+.tagline:hover {
+  color: #ffffff; /* Zmiana koloru na biały na hover */
+}
+
+.navLinks {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Płynna zmiana koloru i transformacja */
+}
+
+.link:hover {
+  color: #13a27d; /* Zielony efekt hover */
+  transform: translateY(-2px); /* Efekt przesunięcia w górę na hover */
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.socialLink {
+  display: inline-block;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, color 0.3s ease; /* Płynna animacja transformacji */
+}
+
+.socialIcon:hover {
+  transform: scale(1.1); /* Powiększenie ikony na hover */
+  color: #13a27d; /* Zmiana koloru ikony na zielony na hover */
+}
+
+.copySection {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+.copySection a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.copySection a:hover {
+  color: #13a27d; /* Zmiana koloru linku na zielony */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .container {
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  .socialIcon {
+    width: 25px;
+    height: 25px;
+  }
+}

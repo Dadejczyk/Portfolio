@@ -4,6 +4,7 @@
   color: #ffffff;
   font-family: "Inter", sans-serif;
   text-align: center;
+  animation: fadeInContainer 1s ease-out; /* Animacja wejścia kontenera */
 }
 
 .header {
@@ -25,25 +26,48 @@
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  display: flex; /* Dodanie flexbox */
-  flex-direction: column; /* Ustawienie elementów w kolumnie */
-  align-items: center; /* Wyrównanie poziome */
-  justify-content: center; /* Wyrównanie pionowe */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Dodana zmiana tła */
 }
 
 .skillCard:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #2c2f54; /* Zmiana tła na hover */
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #13a27d;
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.2s ease, rotate 0.3s ease; /* Dodana animacja obrotu */
+}
+
+.icon:hover {
+  color: #084837;
+  transform: scale(1.1) rotate(15deg); /* Obrót na hover */
 }
 
 .text {
-  font-size: 1rem;
-  color: #b3c1d1;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 5px;
+  transition: color 0.3s ease; /* Płynna zmiana koloru */
+}
+
+.text:hover {
+  color: #66ccff; /* Zmiana koloru tekstu na hover */
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

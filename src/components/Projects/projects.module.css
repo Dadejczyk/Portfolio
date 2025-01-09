@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
-  background-color: #1d1f33; /* Ciemniejszy odcień granatowego */
+  background-color: #1d1f33;
+  animation: fadeInContainer 1s ease-out; /* Animacja wejścia */
 }
 
 .sectionTitle {
@@ -11,7 +12,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
-  color: #fff; /* Biały dla kontrastu */
+  color: #fff;
 }
 
 .skillsGrid {
@@ -23,18 +24,22 @@
 }
 
 .card {
-  background-color: #2d3142; /* Ciemniejszy odcień szaro-niebieskiego */
-  border-radius: 10px; /* Zaokrąglone rogi dla lepszego wyglądu */
+  background-color: #2d3142;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Drobniejsze cienie dla elegancji */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Dodanie animacji zmiany tła */
+  opacity: 0;
+  animation: fadeInCard 1s ease-out forwards; /* Animacja pojawiania się karty */
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mocniejsze cienie na hover */
+  transform: translateY(-10px) scale(1.05); /* Dodano efekt powiększenia */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #3a4454; /* Zmiana tła na ciemniejszy odcień */
 }
 
 .cardImg {
@@ -42,7 +47,7 @@
   height: 180px;
   object-fit: cover;
   display: block;
-  border-bottom: 3px solid #13a27d; /* Zielona linia pod obrazkiem */
+  border-bottom: 3px solid #13a27d;
 }
 
 .cardContent {
@@ -57,22 +62,20 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #f0f0f0; /* Jasny kolor tekstu */
-  text-align: center;
+  color: #f0f0f0;
 }
 
 .cardDescription {
   font-size: 1rem;
-  color: #b0b0b0; /* Jaśniejszy szary dla opisu */
+  color: #b0b0b0;
   margin-bottom: 20px;
   line-height: 1.5;
-  text-align: center;
 }
 
 .cardButton {
   display: inline-block;
   text-align: center;
-  background-color: #13a27d; /* Ciemny zielony */
+  background-color: #13a27d;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -85,15 +88,14 @@
 }
 
 .cardButton:hover {
-  background-color: #084837; /* Ciemniejszy odcień zielonego */
+  background-color: #084837;
   transform: translateY(-2px);
 }
 
 .cardButton:active {
-  transform: translateY(1px); /* Efekt nacisku */
+  transform: translateY(1px);
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
   .cardsContainer {
     padding: 20px 10px;
@@ -153,5 +155,29 @@
   .cardButton {
     font-size: 1.1rem;
     padding: 12px 24px;
+  }
+}
+
+/* Animacje */
+
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
