@@ -1,17 +1,28 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./navbar.module.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Sprawdzenie bieżącej lokalizacji
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <a className={styles.logoText}>BDesigns</a>
+        <Link to="/" className={styles.logoText}>
+          BDesigns
+        </Link>
       </div>
 
       <button
@@ -26,20 +37,39 @@ function Navbar() {
 
       <ul className={`${styles.navList} ${isMenuOpen ? styles.show : ""}`}>
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <a href="#about">About Me</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        {location.pathname === "/" ? (
+          <>
+            <li>
+              <a onClick={() => scrollToSection("about")}>About Me</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("projects")}>Projects</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("skills")}>Skills</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("contact")}>Contact</a>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/#about">About Me</Link>
+            </li>
+            <li>
+              <Link to="/#projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/#skills">Skills</Link>
+            </li>
+            <li>
+              <Link to="/#contact">Contact</Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

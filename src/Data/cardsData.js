@@ -13,7 +13,7 @@ const cardsData = [
   },
   {
     id: "2",
-    title: "Projekt 2",
+    title: "Car Rent",
     description:
       "I created a one-page website for a car rental service, providing users with quick access to the car offer, pricing, and contact form...",
     fullDescription:
@@ -25,7 +25,7 @@ const cardsData = [
   },
   {
     id: "3",
-    title: "Projekt 3",
+    title: "Dimonds, Gold & Money",
     description:
       "I created a one-page website dedicated to gold, diamonds, and financial investments. The site provides users with up-to-date...",
     fullDescription:
@@ -37,7 +37,7 @@ const cardsData = [
   },
   {
     id: "4",
-    title: "Projekt 4",
+    title: "Tropical Paradise",
     description:
       "I created a one-page website showcasing the most beautiful islands around the world. The site provides users with detailed information...",
     fullDescription:

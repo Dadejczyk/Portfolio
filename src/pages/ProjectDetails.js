@@ -8,19 +8,16 @@ function ProjectDetails() {
   const { id } = useParams();
   const project = cardsData.find((project) => project.id === id);
 
-  // Stan do kontrolowania, które zdjęcie jest aktualnie wybrane
   const [selectedImage, setSelectedImage] = useState(null);
 
   if (!project) {
-    return <p>Project not found</p>; // Możesz dodać bardziej zaawansowaną obsługę błędów
+    return <p>Project not found</p>;
   }
 
-  // Funkcja do otwierania modala z wybranym zdjęciem
   const openModal = (imageUrl) => {
     setSelectedImage(imageUrl);
   };
 
-  // Funkcja do zamknięcia modala
   const closeModal = () => {
     setSelectedImage(null);
   };
@@ -36,8 +33,6 @@ function ProjectDetails() {
           style={{ backgroundImage: `url(${project.imageUrl})` }}
         ></div>
 
-        <p className={styles.desc}>{project.fullDescription}</p>
-
         <div className={styles.imageGallery}>
           <div
             className={styles.secondImg}
@@ -49,6 +44,45 @@ function ProjectDetails() {
             style={{ backgroundImage: `url(${project.thirdUrl})` }}
             onClick={() => openModal(project.thirdUrl)}
           ></div>
+        </div>
+        
+        <div className={styles.description}>
+          <p>{project.fullDescription}</p>
+
+          <h2 className={styles.subheading}>Key Features:</h2>
+          <ul className={styles.featureList}>
+            <li>
+              <strong>Transparent Pricing:</strong> Easily view services and
+              prices.
+            </li>
+            <li>
+              <strong>Contact Section:</strong> Includes a contact form and
+              detailed contact info for smooth appointment scheduling.
+            </li>
+            <li>
+              <strong>Service Menu:</strong> Showcases treatments with
+              descriptions and images to inspire trust.
+            </li>
+            <li>
+              <strong>Elegant Design:</strong> A minimalist style tailored to
+              the beauty industry.
+            </li>
+          </ul>
+
+          <h2 className={styles.subheading}>Technologies Used:</h2>
+          <ul className={styles.techList}>
+            <li>
+              Built with <strong>HTML, CSS, JavaScript, CMS</strong>
+            </li>
+            <li>
+              <strong>SEO Optimized & Fully Responsive</strong>
+            </li>
+          </ul>
+
+          <p>
+            This project demonstrates my ability to blend aesthetics with
+            functionality, providing both beauty and utility in design.
+          </p>
         </div>
       </div>
 

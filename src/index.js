@@ -5,7 +5,8 @@ import App from "./App.js";
 import reportWebVitals from "./reportWebVitals.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Projects from "./components/Projects/Projects.jsx";
-import ProjectDetails from "./pages/ProjectDetails.js"; // Importuj komponent szczegółów
+import ProjectDetails from "./pages/ProjectDetails.js";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "projects/:id",
     element: <ProjectDetails />,
+  },
+  {
+    path: "/privacy-policy", // Dodaj route dla Polityki Prywatności
+    element: <PrivacyPolicy />,
   },
 ]);
 

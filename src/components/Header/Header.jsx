@@ -6,11 +6,16 @@ function Header() {
       <img src="./images/kid.jpg" alt="" className={styles.overlay} />
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Hi, I'm <span className={styles.name}>Bartłomiej Dadej</span>
+          <span className={styles.greeting}>Hello,</span> I'm{" "}
+          <span className={styles.name}>Bartłomiej Dadej</span>
         </h1>
-        <p className={styles.subtitle}>Crafting Elegant Web Experiences</p>
+        <p className={styles.subtitle}>
+          Building Digital Dreams with Precision
+        </p>
         <div className={styles.cta}>
-          <button className={styles.buttonPrimary}>Explore My Work</button>
+          <a href="#projects" className={styles.buttonPrimary}>
+            Explore My Work
+          </a>
           <a href="/BartłomiejDadej.pdf" download>
             <button className={styles.buttonSecondary}>Download CV</button>
           </a>

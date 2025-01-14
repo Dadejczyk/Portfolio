@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
@@ -28,12 +28,12 @@ body {
 .logo {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #00c7a0; /* Cyjanowy kolor dla logo */
+  color: #00c7a0;
   transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
-  transform: scale(1.1); /* Powiększenie logo na hover */
+  transform: scale(1.1);
 }
 
 .logoText {
@@ -62,7 +62,7 @@ body {
 }
 
 .hamburger:hover .bar {
-  background-color: #00c7a0; /* Cyjanowy kolor dla hamburgera */
+  background-color: #00c7a0;
 }
 
 .navList {
@@ -95,8 +95,8 @@ body {
 }
 
 .navList li:hover {
-  transform: translateX(10px); /* Przesunięcie w prawo przy hover */
-  background-color: #00c7a0; /* Cyjanowy kolor tła */
+  transform: translateX(10px);
+  background-color: #00c7a0;
 }
 
 .navList a:hover {
@@ -142,21 +142,21 @@ body {
   .navList {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: static;
     background-color: transparent;
     box-shadow: none;
-    animation: none; /* Brak animacji na większych ekranach */
+    animation: none;
   }
 
   .hamburger {
-    display: none; /* Ukrywamy hamburgera na większych ekranach */
+    display: none;
   }
 
   .navList li {
     padding: 1rem 2rem;
-    animation: none; /* Brak animacji na większych ekranach */
+    animation: none;
   }
 
   .navList li:hover {

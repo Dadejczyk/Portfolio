@@ -4,7 +4,7 @@
   align-items: center;
   padding: 40px 20px;
   background-color: #1d1f33;
-  animation: fadeInContainer 1s ease-out; /* Animacja wejścia */
+  animation: fadeInContainer 1s ease-out;
 }
 
 .sectionTitle {
@@ -13,6 +13,8 @@
   text-align: center;
   margin-bottom: 30px;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .skillsGrid {
@@ -25,59 +27,72 @@
 
 .card {
   background-color: #2d3142;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
+  min-height: 400px; /* Ensures all cards have a consistent height */
   transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease; /* Dodanie animacji zmiany tła */
+    background-color 0.3s ease;
   opacity: 0;
-  animation: fadeInCard 1s ease-out forwards; /* Animacja pojawiania się karty */
+  animation: fadeInCard 1s ease-out forwards;
+  display: flex;
+  flex-direction: column; /* Ensures consistent card layout */
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.05); /* Dodano efekt powiększenia */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #3a4454; /* Zmiana tła na ciemniejszy odcień */
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+  background-color: #3a4454;
 }
 
 .cardImg {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   display: block;
-  border-bottom: 3px solid #13a27d;
+  border-bottom: 4px solid #13a27d;
+  transition: border-color 0.3s ease;
+}
+
+.cardImg:hover {
+  border-color: #084837;
 }
 
 .cardContent {
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between; /* Ensures space between elements */
+  flex-grow: 1; /* Makes sure content fills available space */
+  background-color: #3a4454;
+  border-radius: 0 0 15px 15px;
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #f0f0f0;
+  text-transform: capitalize;
 }
 
 .cardDescription {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #b0b0b0;
   margin-bottom: 20px;
   line-height: 1.5;
+  flex-grow: 1; /* Ensures description takes up available space */
 }
 
 .cardButton {
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #13a27d;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -85,6 +100,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 12px 20px;
 }
 
 .cardButton:hover {
@@ -158,8 +174,7 @@
   }
 }
 
-/* Animacje */
-
+/* Animations */
 @keyframes fadeInContainer {
   0% {
     opacity: 0;
