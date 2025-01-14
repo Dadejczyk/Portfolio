@@ -4,7 +4,7 @@
   color: #ffffff;
   font-family: "Inter", sans-serif;
   text-align: center;
-  animation: fadeInContainer 1s ease-out; /* Animacja wejścia kontenera */
+  animation: fadeInContainer 1s ease-out;
 }
 
 .header {
@@ -37,30 +37,30 @@
 .skillCard:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  background-color: #2c2f54; /* Zmiana tła na hover */
+  background-color: #2c2f54;
 }
 
 .icon {
   font-size: 3rem;
   color: #13a27d;
   margin-bottom: 10px;
-  transition: color 0.3s ease, transform 0.2s ease, rotate 0.3s ease; /* Dodana animacja obrotu */
+  transition: color 0.3s ease, transform 0.2s ease, rotate 0.3s ease;
 }
 
 .icon:hover {
   color: #084837;
-  transform: scale(1.1) rotate(15deg); /* Obrót na hover */
+  transform: scale(1.1) rotate(15deg);
 }
 
 .text {
   font-size: 1.2rem;
   color: #ffffff;
   margin-top: 5px;
-  transition: color 0.3s ease; /* Płynna zmiana koloru */
+  transition: color 0.3s ease;
 }
 
 .text:hover {
-  color: #66ccff; /* Zmiana koloru tekstu na hover */
+  color: #66ccff;
 }
 
 @keyframes rotateIcon {

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     element: <ProjectDetails />,
   },
   {
-    path: "/privacy-policy", // Dodaj route dla Polityki Prywatności
+    path: "/privacy-policy",
     element: <PrivacyPolicy />,
   },
 ]);

@@ -32,13 +32,13 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 320px;
-  min-height: 400px; /* Ensures all cards have a consistent height */
+  min-height: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
   opacity: 0;
   animation: fadeInCard 1s ease-out forwards;
   display: flex;
-  flex-direction: column; /* Ensures consistent card layout */
+  flex-direction: column;
 }
 
 .card:hover {
@@ -65,8 +65,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures space between elements */
-  flex-grow: 1; /* Makes sure content fills available space */
+  justify-content: space-between;
+  flex-grow: 1;
   background-color: #3a4454;
   border-radius: 0 0 15px 15px;
 }
@@ -84,7 +84,7 @@
   color: #b0b0b0;
   margin-bottom: 20px;
   line-height: 1.5;
-  flex-grow: 1; /* Ensures description takes up available space */
+  flex-grow: 1;
 }
 
 .cardButton {
